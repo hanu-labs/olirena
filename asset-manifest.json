@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/olirena/static/css/main.5f361e03.chunk.css",
+    "main.js": "/olirena/static/js/main.91161fcc.chunk.js",
+    "main.js.map": "/olirena/static/js/main.91161fcc.chunk.js.map",
+    "runtime-main.js": "/olirena/static/js/runtime-main.8d2bd0c7.js",
+    "runtime-main.js.map": "/olirena/static/js/runtime-main.8d2bd0c7.js.map",
+    "static/js/2.582a3eca.chunk.js": "/olirena/static/js/2.582a3eca.chunk.js",
+    "static/js/2.582a3eca.chunk.js.map": "/olirena/static/js/2.582a3eca.chunk.js.map",
+    "index.html": "/olirena/index.html",
+    "precache-manifest.54490bee39c24e827f05b0ed04213daf.js": "/olirena/precache-manifest.54490bee39c24e827f05b0ed04213daf.js",
+    "service-worker.js": "/olirena/service-worker.js",
+    "static/css/main.5f361e03.chunk.css.map": "/olirena/static/css/main.5f361e03.chunk.css.map",
+    "static/js/2.582a3eca.chunk.js.LICENSE.txt": "/olirena/static/js/2.582a3eca.chunk.js.LICENSE.txt",
+    "static/media/logo.svg": "/olirena/static/media/logo.5d5d9eef.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.8d2bd0c7.js",
+    "static/js/2.582a3eca.chunk.js",
+    "static/css/main.5f361e03.chunk.css",
+    "static/js/main.91161fcc.chunk.js"
+  ]
+}
