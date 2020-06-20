@@ -1,43 +1,36 @@
-import React from 'react';
-import logo from './assets/logo.jpg';
+import React, { Suspense } from 'react';
 import './App.scss';
-import { SocialMediaIconsReact } from 'social-media-icons-react';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
-function App() {
+import ErrorPage from './views/ErrorPage';
+import routes from './routes';
+import LoadingScreen from './components/LoadingScreen';
+import Header from './components/Header';
+import Sidebar from './components/Sidebar';
+
+const AppWrapper = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <div className="flex-row">
-          {[
-            {
-              icon: 'instagram',
-              url: 'https://www.instagram.com/olirenapel/'
-            },
-            {
-              icon: 'facebook',
-              url: 'https://www.facebook.com/olirena.olirena'
-            }
-
-          ].map((icon) => (
-            <SocialMediaIconsReact
-              borderColor="rgba(0,0,0,0.25)"
-              borderWidth="2"
-              borderStyle="solid"
-              iconColor="rgba(255,255,255,1)"
-              iconSize="5"
-              roundness="20%"
-              size="40"
-              key={icon.icon}
-              {...icon}
-            />
-          ))}
+    <BrowserRouter>
+      <div className="App">
+        <Sidebar />
+        <div className="App-content">
+          <Suspense fallback={<LoadingScreen />}>
+            <Switch>
+              {routes.map((route) => (
+                <Route
+                  key={route.path}
+                  {...route}
+                />
+              ))}
+              <Route
+                component={() => <ErrorPage code={404} />}
+              />
+            </Switch>
+          </Suspense>
         </div>
-
-
-        </header>
-    </div>
-  );
+      </div>
+    </BrowserRouter>
+  )
 }
 
-export default App;
+export default AppWrapper;

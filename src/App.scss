@@ -1,28 +1,103 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     /* animation: App-logo-spin infinite 20s linear; */
   }
 }
 
-.App-header {
-  background-color: #cc191f;
-  min-height: 100vh;
+.App {
+  --background-color: #cc191f; 
+  * {
+    color: inherit;
+    text-decoration: none;
+  }
+
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background-color: var(--background-color);
+  text-align: center;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+
+  .sidebar-placeholder {
+    height: 32px;
+  }
+
+  .sidebar,
+  .App-header {
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+    display: flex;
+    flex-direction: row;
+    padding: 0 12px;
+    box-shadow: 0px 2px 8px 0px black;
+    background-color: var(--background-color);
+    z-index: 1;
+
+    &.sidebar {
+      position: fixed;
+      height: 100%;
+      flex-direction: column;
+      transition: all ease-in 0.4s;
+      width: 200px;
+      left: -200px;
+      top: 0;
+      box-sizing: border-box;
+
+      .App-logo {
+        width: 80%;
+      }
+
+      &.visible {
+        left: 0px;
+      }    
+    }
+
+    &.App-header {
+      height: 80px;
+    
+      .App-logo {
+        height: 80%;
+      }
+    }
+
+    > a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+    }
+
+    nav {
+      flex-grow: 1;
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-start;
+      flex-direction: column;
+      margin: 12px 0;
+
+      > * {
+        font-size: 16px;
+        line-height: 32px;
+        border-left: 6px solid transparent;
+        padding-left: 12px;
+        border-radius: 6px;
+        &.active {
+          border-left-color: white;
+        }
+      }
+    }
+  }
+
+  .App-content {
+    flex-grow: 1;
+  }
 }
+
 
 .App-link {
   color: #61dafb;
@@ -37,11 +112,63 @@
   }
 }
 
-
-.flex-row {
+.social-networks {
   display: flex;
+  border-top: 1px solid white;
+  padding-top: 20px;
+  margin-top: 20px;
   
   > * {
     margin: 0px 3px;
   }
+}
+
+.calendly-container {
+  border: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.View-Home {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  overflow: auto;
+
+  .Home-logo {
+    width: 70vw;
+    max-width: 300px;
+  }
+
+  .subtitle {
+    font-size: calc(24px + 1vw);
+    color: white;
+    font-family: sans-serif;
+  }
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  > h2 {
+    color: white;
+  }
+
+  > .content {
+    flex-grow: 1;
+  }
+}
+
+.toggle-sidebar {
+  cursor: pointer;
+  display: flex;
+  margin: 6px 8px;
+  color: white;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
