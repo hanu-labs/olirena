@@ -17,10 +17,12 @@
   text-align: center;
   width: 100vw;
   height: 100vh;
-  overflow: hidden;
+  // overflow: hidden;
 
   .sidebar-placeholder {
     height: 32px;
+    fill: white;
+    background-color: black;
   }
 
   .sidebar,
@@ -117,6 +119,7 @@
   border-top: 1px solid white;
   padding-top: 20px;
   margin-top: 20px;
+  justify-content: center;
   
   > * {
     margin: 0px 3px;
@@ -125,18 +128,12 @@
 
 .calendly-container {
   border: 0;
-  height: 100%;
+  height: calc(100% - 3px);
   width: 100%;
 }
 
-.View-Home {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 100%;
-  overflow: auto;
 
+.logo {
   .Home-logo {
     width: 70vw;
     max-width: 300px;
