@@ -84,18 +84,7 @@ class Home extends React.Component {
         >
           <div>
             <Logo />
-          </div>
-
-        </ParallaxLayer>
-        <ParallaxLayer
-          offset={0}
-          speed={-1.1}
-          factor={1}
-          style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', marginTop: '20%' }}
-        >
-          <div>
-            <div className="social-networks">
-              {[
+            {[
                 {
                   icon: 'instagram',
                   url: 'https://www.instagram.com/olirenapel/'
@@ -118,7 +107,6 @@ class Home extends React.Component {
                   {...icon}
                 />
               ))}
-            </div>
           </div>
 
         </ParallaxLayer>
