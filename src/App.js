@@ -1,6 +1,6 @@
 import React, { Suspense } from 'react';
 import './App.scss';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { HashRouter as Router, Switch, Route } from 'react-router-dom';
 
 import ErrorPage from './views/ErrorPage';
 import routes from './routes';
@@ -10,7 +10,7 @@ import Sidebar from './components/Sidebar';
 
 const AppWrapper = () => {
   return (
-    <BrowserRouter>
+    <Router>
       <div className="App">
         <Sidebar />
         <div className="App-content">
@@ -29,7 +29,7 @@ const AppWrapper = () => {
           </Suspense>
         </div>
       </div>
-    </BrowserRouter>
+    </Router>
   )
 }
 
