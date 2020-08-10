@@ -41,7 +41,7 @@ const imgs = [
     src: img5,
     offset: 5,
     speed: 0,
-    text: 'Corte desgastado'
+    text: 'Cortes desgastados'
   },
 ];
 
