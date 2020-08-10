@@ -9,11 +9,11 @@ const routes = [
     title: 'Inicio',
     component: Home,
   },
-  {
-    path: '/turnos',
-    title: 'Pedí tu turno',
-    component: Turnos,
-  },
+  // {
+  //   path: '/turnos',
+  //   title: 'Reservá tu turno',
+  //   component: Turnos,
+  // },
   {
     path: '/donde',
     title: 'Como llegar',
