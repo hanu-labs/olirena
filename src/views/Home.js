@@ -180,7 +180,7 @@ class Home extends React.Component {
               />
               <div>
                 <NavLink to={'/donde'}>
-                  <img src={iconMarker} alt="donde"/>Av. Eva Perón 5695, Mataderos
+                  <img src={iconMarker} alt="donde"/>Chivilcoy 47, Floresta
                 </NavLink>
               </div>
             </h2> 
